@@ -80,7 +80,7 @@ tema-exemplo/
 Um fork é uma cópia do repositório na sua conta do GitHub onde você pode fazer suas alterações.
 
 **Como fazer o fork pela interface web:**
-1. **Crie uma conta no GitHub** se ainda não tiver: https://github.com/signup
+1. **Crie uma conta no GitHub** se ainda não tiver: https://github.com/join
 2. **Acesse o repositório original**: https://github.com/gdbarros94/projeto-final-meninas-na-ti-2025
 3. **Clique no botão "Fork"** no canto superior direito da página
 4. O GitHub criará uma cópia do repositório na sua conta
@@ -380,8 +380,9 @@ Seu projeto **DEVE** conter os seguintes requisitos:
 2. Clique no botão **"Contribute"** (logo abaixo do botão verde "Code")
 3. Clique em **"Open pull request"**
 4. Você será redirecionado para uma página de comparação
-5. **Preencha as informações:**
+5. **Preencha as informações** (substitua os textos entre colchetes pelos seus dados):
    - **Título:** `Projeto Final - [SEU-NOME] - [TEMA-ESCOLHIDO]`
+     - Exemplo: `Projeto Final - Maria Silva - Petshop`
    - **Descrição:** Descreva brevemente o que você fez:
      ```
      - Tema escolhido: [nome do tema]
