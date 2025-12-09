@@ -40,6 +40,19 @@ function renderizarProdutos(produtos) {
         `;
         
         container.appendChild(col);
+
+        let modalProduto = new bootstrap.Modal(document.getElementById('modalProduto'));
+        let modalProdutoLabel = document.querySelector('#modalProduto .modal-title');
+        let modalProdutoBody = document.querySelector('#modalProduto .modal-body');
+
+        col.addEventListener('click', () => {
+            modalProdutoLabel.textContent = produto.titulo;
+            modalProdutoBody.innerHTML = `
+                <img src="${produto.imagem}" class="img-fluid mb-3" alt="${produto.titulo}">
+                <p>${produto.descricao}</p>
+            `;
+            modalProduto.show();
+        });
     });
     
     // Ativa as animações de revelação após renderizar
@@ -89,8 +102,8 @@ function configurarFormulario() {
         // Coleta os dados do formulário
         const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
-        const telefone = document.getElementById('telefone').value;
-        const mensagem = document.getElementById('mensagem').value;
+        // const telefone = document.getElementById('telefone').value;
+        // const mensagem = document.getElementById('mensagem').value;
         
         // Exibe mensagem de sucesso (em um projeto real, aqui você enviaria os dados)
         alert(`Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.\n\nDados recebidos:\nE-mail: ${email}\nTelefone: ${telefone}\nMensagem: ${mensagem}`);

@@ -7,6 +7,8 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +31,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#sobre">Sobre</a>
+                            <a class="nav-link" href="sobre.html">Sobre</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#produtos">Produtos</a>
@@ -42,7 +44,7 @@
             </div>
         </nav>
     </header>
-
+    
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-overlay"></div>
@@ -52,7 +54,7 @@
             <a href="#produtos" class="btn btn-primary btn-lg fade-in">Explore Agora</a>
         </div>
     </section>
-
+    
     <!-- Bloco 1: Cards de Produtos -->
     <section id="produtos" class="produtos-section py-5">
         <div class="container">
@@ -62,74 +64,244 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Bloco 2: Formulário de Contato -->
     <section id="contato" class="contato-section py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <h2 class="section-title text-center mb-4">Cadastre-se e Receba Novidades</h2>
-                    <form id="formulario-contato" class="formulario-card">
-                        <div class="mb-3">
-                            <label for="nome" class="form-label">Nome Completo</label>
-                            <input type="text" class="form-control" id="nome" required>
+                    
+                    <form 
+                    id="formulario-contato"
+                    class="formulario-card"
+                    action="https://formspree.io/f/xjknabry"
+                    method="POST"
+                    >
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Seu Nome</label>
+                        <input type="text" class="form-control" name="nome" id="nome" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Seu E-mail</label>
+                        <input type="email" class="form-control" name="email" id="email" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="aceito" required>
+                            <label class="form-check-label" for="aceito">
+                                Aceito receber novidades e promoções
+                            </label>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="telefone" class="form-label">Telefone</label>
-                            <input type="tel" class="form-control" id="telefone">
-                        </div>
-                        <div class="mb-3">
-                            <label for="mensagem" class="form-label">Mensagem</label>
-                            <textarea class="form-control" id="mensagem" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg w-100">Enviar Mensagem</button>
-                    </form>
-                </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                        Quero Receber Novidades
+                    </button>
+                    
+                    <!-- Mensagem de confirmação -->
+                    <p id="mensagem-sucesso" class="text-success mt-3" style="display:none;">
+                        ✔ Cadastro enviado com sucesso! Verifique seu e-mail.
+                    </p>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Sobre Nós</h5>
-                    <p>Este é um projeto desenvolvido no curso Meninas na TI 2025.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Links Úteis</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#produtos">Produtos</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Redes Sociais</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col text-center">
-                    <p class="mb-0">&copy; 2025 Meninas na TI. Todos os direitos reservados.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- POP-UP ESTILIZADO FAIRYCORE + Y2K -->
+<style>
+    /* Fundo escurecido */
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(4px);
+        z-index: 9999;
+    }
     
-    <!-- JavaScript Personalizado -->
-    <script src="script.js"></script>
+    /* Janela do pop-up */
+    .popup-box {
+        background: linear-gradient(135deg, #ffe6ff, #e3baff, #d2d4ff);
+        padding: 30px;
+        width: 90%;
+        max-width: 400px;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 0 0 25px rgba(255, 140, 255, 0.7), 0 0 50px rgba(170, 150, 255, 0.5);
+        animation: popIn 0.4s ease;
+        border: 2px solid #ffffff80;
+    }
+    
+    @keyframes popIn {
+        0% { transform: scale(0.7); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+    
+    .popup-box h3 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        color: #733fa6;
+        margin-bottom: 10px;
+        text-shadow: 0 0 8px #fff;
+    }
+    
+    .popup-box p {
+        font-family: "Poppins", sans-serif;
+        color: #5a2f7c;
+        margin-bottom: 20px;
+    }
+    
+    .popup-btn {
+        background: #b57aff;
+        border: none;
+        padding: 10px 20px;
+        color: white;
+        font-weight: bold;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: 0.2s;
+        box-shadow: 0 0 10px #caa7ff;
+    }
+    
+    .popup-btn:hover {
+        background: #d5b3ff;
+        box-shadow: 0 0 15px #e5caff;
+    }
+</style>
+
+<!-- POP-UP HTML -->
+<div id="popupOverlay" class="popup-overlay">
+    <div class="popup-box">
+        <h3>✨ Cadastro Enviado! ✨</h3>
+        <p>Obrigada por se cadastrar! Em breve você receberá novidades mágicas da nossa loja. 💜🧚‍♀️</p>
+        <button class="popup-btn" onclick="fecharPopup()">Fechar</button>
+    </div>
+</div>
+
+<script>
+    // Abre o pop-up
+    function abrirPopup() {
+        document.getElementById("popupOverlay").style.display = "flex";
+    }
+    
+    // Fecha o pop-up
+    function fecharPopup() {
+        document.getElementById("popupOverlay").style.display = "none";
+    }
+    
+    // Integração com o formulário existente
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        const formulario = document.getElementById("formulario-contato");
+        
+        if (!formulario) return;
+        
+        formulario.addEventListener("submit", async function (e) {
+            e.preventDefault();
+            
+            const dados = new FormData(formulario);
+            
+            try {
+                const resposta = await fetch(formulario.action, {
+                    method: "POST",
+                    body: dados,
+                    headers: { "Accept": "application/json" }
+                });
+                
+                if (resposta.ok) {
+                    formulario.reset();
+                    abrirPopup();
+                } else {
+                    alert("❗ Ocorreu um erro ao enviar. Tente novamente.");
+                }
+                
+            } catch (erro) {
+                alert("❗ Erro de conexão. Tente novamente.");
+            }
+        });
+    });
+</script>
+
+<!-- Footer -->
+<footer class="footer py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Sobre Nós</h5>
+                <p>Este é um projeto desenvolvido no curso Meninas na TI 2025.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Links Úteis</h5>
+                <ul class="list-unstyled">
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Redes Sociais</h5>
+                <ul class="list-unstyled social-links">
+                    <li>
+                        <a href="https://www.instagram.com/mahh_smc?igsh=cGU0ZnlyMHp1cjY5&utm_source=qr"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-instagram"></i> Instagram
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.facebook.com/share/1A6EbRVDKG/?mibextid=wwXIfr"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-facebook"></i> Facebook
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.tiktok.com/@m4h_smc?_r=1&_t=ZS-925OyJXtvc4"
+                target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-music-note-beamed"></i> TikTok
+            </a>
+        </li>
+    </ul>
+</div>
+
+</div>
+<div class="row mt-3">
+    <div class="col text-center">
+        <p class="mb-0">&copy; 2025 Meninas na TI. Todos os direitos reservados.</p>
+    </div>
+</div>
+</div>
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="modalProduto" tabindex="-1" aria-labelledby="modalProdutoLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalProdutoLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Personalizado -->
+<script src="script.js"></script>
 </body>
 </html>

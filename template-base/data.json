@@ -2,48 +2,48 @@
   {
     "titulo": "Vestido fairycore verde com cauda fluida",
     "descricao": "🌿🧚‍♀️ Forest Fairy Dress – Para quem ama leveza e magia! Vestido justo no corpo com saia soltinha e caudas laterais longas que trazem um movimento mágico. A estampa suave em tons naturais cria uma vibe etérea perfeita para estética fairycore, cottage ou coquette nature. Ideal para fotos, festas, passeios ou qualquer momento em que você queira se sentir uma fada moderna.",
-    "imagem": "assets/images/vestido-floral.jpg.jpeg"
+    "imagem": "/temas/catalogo-roupas/assets/images/vestido-floral.jpg"
   },
 
   {
     "titulo": "Calça cargo wide com recortes em estrela e espiraisy",
     "descricao": "⭐ Cargo Star Y2K – A calça mais autêntica do momento! Peça statement com estrelas aplicadas e recortes diferenciados em espiral, criando um visual único e cheio de atitude. Modelagem wide, bolsos utilitários e detalhes metálicos completam a estética alternativa/techwear/Y2K. Para quem ama peças exclusivas e chamativas.",
-    "imagem": "assets/images/calca-jeans.jpg"
+    "imagem": "/temas/catalogo-roupas/assets/images/calca-jeans.jpg"
   },
 
   {
     "titulo": "Suéter oversized com estrelas + saia preta de babados",
     "descricao": "✨ Star Cozy Set – Conforto e estilo em um look só! Suéter macio com estampa de estrelas, perfeito para dias frios sem perder o charme. A saia preta com babadinhos completa o visual com toque Y2K e vibe e-girl. Combine com meia-calça, gargantilhas e acessórios prateados para um outfit completo e cheio de personalidade.",
-    "imagem": "assets/images/blusa-branca.jpg"
+    "imagem": "/temas/catalogo-roupas/assets/images/blusa-branca.jpg"
   },
 
   {
     "titulo": "Mini saias plissadas básicas (preta, cinza e branca)",
     "descricao": "💫 Mini Saia Double Layer – Versátil, confortável e super estilosa! Mini saia com camadas leves e franzidas, trazendo movimento e feminilidade ao look. Disponível em preto, cinza e branco — combina com absolutamente tudo! Ideal para compor outfits Y2K, academia estética, balletcore ou casual chic. Tecido confortável, com detalhe lateral ajustável.",
-    "imagem": "assets/images/jaqueta-jeans.jpg"
+    "imagem": "/temas/catalogo-roupas/assets/images/jaqueta-jeans.jpg"
   },
 
   {
     "titulo": "Calça jeans wide leg ultra destroyed",
     "descricao": "🔥 Wide Destroyed Xtreme – A calça mais estilosa da sua coleção! Calça jeans de cintura alta, modelagem wide e recortes extremamente desfiados, dando uma estética única e fashionista. A peça combina perfeitamente com tops justinhos, cropped de manga longa e acessórios metalizados. Perfeita para quem gosta de looks Y2K, street e alternativos.",
-    "imagem": "assets/images/saia-plissada.jpg"
+    "imagem": "/temas/catalogo-roupas/assets/images/saia-plissada.jpg"
   },
 
   {
     "titulo": "Camiseta oversized com estampa de gatinho rock + saia xadrez",
     "descricao": "🐾🎸 Kit Cute Rock – Conforto, estilo e personalidade! A camiseta oversized traz uma estampa fofa e irreverente de gatinho rockstar, perfeita para looks descontraídos. Combinada com a saia xadrez estilo colegial, cria uma vibe Y2K acadêmica super charmosa. Ideal para quem ama looks confortáveis, estilosos e com um toque fun.",
-    "imagem": "assets/images/conjunto-moletom.jpg"
+    "imagem": "/temas/catalogo-roupas/assets/images/conjunto-moletom.jpg"
   },
 
   {
     "titulo": "Blusa preta Y2K com estampa gráfica de borboleta",
     "descricao": "🖤 Long Sleeve Butterfly Y2K – Estilo marcante e cheio de atitude! Blusa de manga longa com modelagem justinha e estampa icônica nas costas: uma borboleta estilizada em lettering metalizado no melhor estilo Y2K/Grunge. Perfeita para compor looks urbanos, com jeans cargo, saias ou calças wide. Peça indispensável para quem ama estética alternativa e dark fairy.",
-    "imagem": "assets/images/blazer-preto.jpg"
+    "imagem": "/temas/catalogo-roupas/assets/images/blazer-preto.jpg"
   },
 
   {
     "titulo": "Conjunto rendado estilo Fairycore (top + short saia)",
     "descricao": "✨ Conjunto Fairy Lace – Elegância etérea para dias de leveza! Delicado, romântico e cheio de movimento. O top tomara-que-caia em renda possui caimento assimétrico que valoriza o colo e traz aquele toque de fada moderna. O short-saia acompanha o mesmo tecido rendado, com pontas fluidas que criam um visual mágico e super feminino. Ideal para quem ama estética fairycore, peças leves e look de princesa natural.",
-    "imagem": "assets/images/vestido-longo.jpg"
+    "imagem": "/temas/catalogo-roupas/assets/images/vestido-longo.jpg"
   }
 ]

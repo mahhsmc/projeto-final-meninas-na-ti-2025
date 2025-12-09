@@ -21,7 +21,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f98ed8 0%, #764ba2 100%);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -45,14 +45,15 @@ body {
    =========================== */
 .hero {
     position: relative;
-    height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     min-height: 80vh; /* altura mínima — suficiente para boa presença visual */
+      height: auto;     /* adapta se o conteúdo for maior */
+    background: linear-gradient(135deg, #f98ed8 0%, #764ba2 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    margin-top: 56px;
+    padding: 60px 20px;
 }
 
 .hero-overlay {
@@ -101,6 +102,33 @@ body {
 }
 
 /* ===========================
+
+    /* layout de página: garante que o footer fique no fim da tela quando o conteúdo for pequeno */
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main.page-main {
+        flex: 1 0 auto; /* ocupa o espaço disponível entre header e footer */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .card-wrapper{
+        width: 100%;
+        max-width: 720px;
+    }
+
+    /* desloca o card levemente para baixo para não ficar colado no cabeçalho */
+    .card-centered-offset{ transform: translateY(12px); }
    Animação CSS: Hover nos Cards
    =========================== */
 .produto-card {
@@ -110,8 +138,8 @@ body {
 }
 
 .produto-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-15px); /* Aumenta o efeito */
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.356); /* Sombra mais forte */
 }
 
 /* ===========================
@@ -124,7 +152,7 @@ body {
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #667eea;
+    color: #f98ed8;
 }
 
 .produto-card {
@@ -184,7 +212,7 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f98ed8 0%, #764ba2 100%);
     border: none;
     border-radius: 8px;
     padding: 12px 30px;
@@ -257,4 +285,30 @@ body {
     .formulario-card {
         padding: 25px;
     }
+}
+
+/* ===========================
+   Igualar altura dos cards de produtos
+   =========================== */
+/* Aplicar display:flex nas colunas que contêm cards para que os cards igualem altura */
+#produtos .row > [class*="col-"]{
+    display: flex;
+    align-items: stretch;
+}
+
+.produto-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.produto-card .card-body{
+    flex: 1 1 auto; /* permite que o corpo do card cresça e alinhe os cards */
+}
+
+/* Ajustes menores: garantir que botões/rodapés do card fiquem na base */
+.produto-card .card-footer{
+    margin-top: auto;
+    background: transparent;
+    border-top: none;
 }
