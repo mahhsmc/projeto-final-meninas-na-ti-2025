@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Loja - Catálogo de Moda</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Header Fixo -->
+    <header class="header-fixed">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">🍒 Cherry Pixie</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item ms-3">
+                            <a class="nav-link position-relative" href="#" onclick="toggleCart()">
+                                <i class="bi bi-cart"></i>
+                                <span id="cart-count"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produtos">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=msilvamunizcoser055@gmail.com&su=Contato%20-%20Cherry%20Pixie&body=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20a%20loja%20Cherry%20Pixie!"
+                        target="_blank">
+                        Contato
+                    </a>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title fade-in">Sua Moda, Seu Estilo</h1>
+        <p class="hero-subtitle fade-in">Descubra a coleção perfeita para você</p>
+        <a href="#produtos" class="btn btn-primary btn-lg fade-in">Explore Agora</a>
+    </div>
+</section>
+
+<!-- Bloco 1: Cards de Produtos -->
+<section id="produtos" class="produtos-section py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Nossa Coleção</h2>
+        <div class="row" id="produtos-container">
+            
+            <!-- Os cards serão carregados via JavaScript -->
+        </div>
+    </div>
+</section>
+
+<!-- Bloco 2: Formulário de Contato -->
+<section id="contato" class="contato-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="section-title text-center mb-4">Cadastre-se e Receba Novidades</h2>
+                
+                <form 
+                id="formulario-contato"
+                class="formulario-card"
+                action="https://formspree.io/f/xjknabry"
+                method="POST"
+                >
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Seu Nome</label>
+                    <input type="text" class="form-control" name="nome" id="nome" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label">Seu E-mail</label>
+                    <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+                
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="aceito" required>
+                        <label class="form-check-label" for="aceito">
+                            Aceito receber novidades e promoções
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-lg w-100">
+                    Quero Receber Novidades
+                </button>
+                
+                <!-- Mensagem de confirmação -->
+                <p id="mensagem-sucesso" class="text-success mt-3" style="display:none;">
+                    ✔ Cadastro enviado com sucesso! Verifique seu e-mail.
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- POP-UP HTML -->
+<div id="popupOverlay" class="popup-overlay">
+    <div class="popup-box">
+        <h3>✨ Cadastro Enviado! ✨</h3>
+        <p>Obrigada por se cadastrar! Em breve você receberá novidades mágicas da nossa loja. 💜🧚‍♀️</p>
+        <button class="popup-btn" onclick="fecharPopup()">Fechar</button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Sobre Nós</h5>
+                <p>Este é um projeto desenvolvido no curso Meninas na TI 2025.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Links Úteis</h5>
+                <ul class="list-unstyled">
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=msilvamunizcoser055@gmail.com&su=Contato%20-%20Cherry%20Pixie&body=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20a%20loja%20Cherry%20Pixie!"
+                        target="_blank">
+                        Contato
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h5>Redes Sociais</h5>
+            <ul class="list-unstyled social-links">
+                <li>
+                    <a href="https://www.instagram.com/mahh_smc?igsh=cGU0ZnlyMHp1cjY5&utm_source=qr"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-instagram"></i> Instagram
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://www.facebook.com/share/1A6EbRVDKG/?mibextid=wwXIfr"
+                target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-facebook"></i> Facebook
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.tiktok.com/@m4h_smc?_r=1&_t=ZS-925OyJXtvc4"
+            target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-music-note-beamed"></i> TikTok
+        </a>
+    </li>
+</ul>
+</div>
+
+</div>
+<div class="row mt-3">
+    <div class="col text-center">
+        <p class="mb-0">&copy; 2025 Meninas na TI. Todos os direitos reservados.</p>
+    </div>
+</div>
+</div>
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="modalProduto" tabindex="-1" aria-labelledby="modalProdutoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalProdutoLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Adicionar ao carrinho</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript Personalizado -->
+<script src="script.js"></script>
+
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+        <span class="close-cart" onclick="toggleCart()">&times;</span>
+        <h2>Carrinho</h2>
+        
+        <div id="cart-items"></div>
+        
+        <h3>Total: R$ <span id="cart-total">0.00</span></h3>
+        
+        <button class="clear-cart btn-primary text-light" onclick="clearCart()">Esvaziar Carrinho</button>
+    </div>
+</div>
+
+</body>
+</html>
